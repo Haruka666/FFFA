@@ -1,11 +1,24 @@
 nav {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-  }
-  
-  nav a {
-    color: #fff;
-    margin-right: 10px;
-    text-decoration: none;
-  }
+  background-color: #3d3737;
+  padding: 10px 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+li {
+  display: inline;
+}
+
+a {
+  color: #fff;
+  padding: 10px;
+}
+
+a:hover {
+  background-color: #555;
+}
