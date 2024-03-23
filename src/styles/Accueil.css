@@ -1,0 +1,24 @@
+.fffa-banner {
+	color: black;
+	text-align: right;
+	padding: 32px;
+	border-bottom: solid 3px black;
+	display: flex;
+	align-items: center;
+	background-color: rgba(112, 129, 227, 0.785);
+}
+
+.fffa-title {
+    height: 50%;
+	text-align: center;
+}
+
+.fffa-logo {
+    width: 10%;
+	height: auto;
+}
+
+.fffa-login {
+	background-color: grey;
+	
+}
