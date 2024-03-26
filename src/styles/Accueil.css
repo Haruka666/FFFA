@@ -4,7 +4,7 @@
 	border-bottom: solid 3px black;
 	display: flex;
 	align-items: center;
-	background-color: rgba(112, 129, 227, 0.785);
+	background-color: #508bfc;
 }
 
 .fffa-title {
@@ -20,4 +20,8 @@
 .fffa-login {
 	background-color: grey;
 	
+}
+
+body{
+	background-color: #508bfc;
 }

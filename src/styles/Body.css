@@ -1,13 +1,14 @@
 .body-reglement{
-    size: 1%;
+    font-size: 3vw;
 }
 
-h1{
+.mini-titre{
     text-align: center;
+    font-size : 4vw;
 }
 
 .body-css{
-    background-color: rgba(112, 129, 227, 0.785);
+    background-color: #508bfc;
 }
 
 .body-point{
