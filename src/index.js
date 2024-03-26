@@ -3,11 +3,42 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './component/App';
 import reportWebVitals from './reportWebVitals';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import Joueur from './pages/Joueur';
+import Stats from './pages/Stats';
+import Divisions from './pages/Divisions';
+import Connexion from './pages/Connexion';
 
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App/>,
+  },
+  {
+    path: "/Joueur",
+    element: <Joueur/>,
+  },
+  {
+    path: "/Stats",
+    element: <Stats/>,
+  },
+  {
+    path: "/Divisions",
+    element: <Divisions/>,
+  },
+  {
+    path: "/Connexion",
+    element: <Connexion/>,
+  },
+]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

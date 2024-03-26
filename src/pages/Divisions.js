@@ -1,9 +1,13 @@
 import React from 'react';
+import Navbar from '../component/Navbar';
+import Accueil from '../component/Accueil';
 
 function Divisions() {
   return (
     <div>
-      <p>Divisions</p>
+      <Accueil />
+      <Navbar></Navbar>
+      <div> Page Division</div>
     </div>
   );
 }
