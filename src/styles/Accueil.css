@@ -4,24 +4,22 @@
 	border-bottom: solid 3px black;
 	display: flex;
 	align-items: center;
-	background-color: #508bfc;
+	background-color: #508cfc9d;
 }
 
 .fffa-title {
-    height: 50%;
-	text-align: center;
+	
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .fffa-logo {
-    width: 10%;
+    width: 13%;
 	height: auto;
 }
 
-.fffa-login {
-	background-color: grey;
-	
-}
 
-body{
-	background-color: #508bfc;
+.fffa-login {
+	background-color: #6c757d;
+    color: #fff;
 }

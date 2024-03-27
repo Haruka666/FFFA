@@ -1,0 +1,21 @@
+.app-container {
+    display: flex;
+    flex-direction: row; /* Modifiez la direction de flexion pour aligner l'image et le formulaire côte à côte */
+    align-items: center;
+    margin-top: 50px;
+    
+  }
+  
+  .football-stats-form {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Pour une disposition en colonne sur les petits écrans */
+  @media (max-width: 768px) {
+    .app-container {
+      flex-direction: column;
+    }
+  }

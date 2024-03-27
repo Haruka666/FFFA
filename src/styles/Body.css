@@ -1,16 +1,30 @@
+@media screen and (max-width: 1024px) {
 .body-reglement{
+    margin-left: auto;
     font-size: 3vw;
+}
 }
 
 .mini-titre{
     text-align: center;
-    font-size : 4vw;
+    font-size : 3vw;
+
 }
 
+
 .body-css{
-    background-color: #508bfc;
+    background-color: #508cfc9d;
 }
 
 .body-point{
     text-align: center;
+}
+
+.body-image{
+    display: block;
+    width: 30%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+
 }

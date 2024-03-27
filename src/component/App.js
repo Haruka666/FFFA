@@ -7,9 +7,7 @@ import Body from './Body';
 function App() {
   return (
     <div>
-      <Accueil />
-      <Navbar />
-      <Body /> 
+      <Accueil /><Navbar /><Body /> 
     </div>
   );
 }

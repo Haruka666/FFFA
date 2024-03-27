@@ -12,6 +12,7 @@ function Navbar() {
         <li><Link to="/Stats">Stats</Link></li>
       </ul>
     </nav>
+    
   );
 }
 

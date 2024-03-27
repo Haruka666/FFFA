@@ -1,15 +1,83 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Navbar from '../component/Navbar';
 import Accueil from '../component/Accueil';
-import Logo_FFFA from '../images/Logo_FFFA.png';
+import '../styles/Stats.css'
 
 function Stats() {
+
+  const [stats, setStats] = useState({
+    team: '',
+    yards: 0,
+    touchdowns: 0,
+    interceptions: 0,
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setStats(prevStats => ({
+      ...prevStats,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Stats envoyées :', stats);
+    setStats({
+      team: '',
+      yards: 0,
+      touchdowns: 0,
+      interceptions: 0,
+    });
+  };
   return (
     <div>
       <Accueil />
       <Navbar></Navbar>
-      <div> Page Stats</div>
+      <div className="app-container">
+      </div>
+      <form className="football-stats-form" onSubmit={handleSubmit}>
+        <label>
+          Équipe :
+          <input
+            type="text"
+            name="team"
+            value={stats.team}
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          Yards :
+          <input
+            type="number"
+            name="yards"
+            value={stats.yards}
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          Touchdowns :
+          <input
+            type="number"
+            name="touchdowns"
+            value={stats.touchdowns}
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          Interceptions :
+          <input
+            type="number"
+            name="interceptions"
+            value={stats.interceptions}
+            onChange={handleChange}
+          />
+        </label>
+        <button type="submit">Soumettre</button>
+      </form>
     </div>
+
+    
   );
 }
 

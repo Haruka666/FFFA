@@ -1,23 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Navbar from '../component/Navbar';
 import Accueil from '../component/Accueil';
-import React, { useState } from 'react';
-
-const LoginPage = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [loggedIn, setLoggedIn] = useState(false);
-
-  const handleLogin = (e) => {
-    e.preventDefault();
-    // Vérifier les informations d'identification ici, par exemple en utilisant une API ou en les comparant à une base de données
-    // Simulons une connexion réussie ici
-    if (username === 'utilisateur' && password === 'motdepasse') {
-      setLoggedIn(true);
-    } else {
-      alert('Nom d\'utilisateur ou mot de passe incorrect');
-    }
-  };
+import { Link } from 'react-router-dom';
+import '../styles/Connexion.css'
 
 
 function Connexion() {
@@ -25,32 +10,42 @@ function Connexion() {
     <div>
       <Accueil />
       <Navbar></Navbar>
-      <div> page Connexion</div>
-      <div>
-      {loggedIn ? (
-        <div>
-          <h1>Bienvenue {username}!</h1>
-          <button onClick={() => setLoggedIn(false)}>Déconnexion</button>
+      <div className="Auth-form-container">
+      <form className="Auth-form">
+        <div className="Auth-form-content">
+          <h3 className="Auth-form-title">Connexion</h3>
+          <div className="form-group mt-3">
+            <label>Email    </label>
+            <input
+              type="email"
+              className="form-control mt-1"
+              placeholder="Email Club"
+            />
+          </div>
+          <div className="form-group mt-3">
+            <label>Mot de passe</label>
+            <input
+              type="password"
+              className="form-control mt-1"
+              placeholder="Mot de passe"
+            />
+          </div>
+          <div className="d-grid gap-2 mt-3">
+            <button type="submit" className="btn btn-primary">
+              Connexion
+            </button>
+          </div>
+          <p className="Mdp-oublie">
+          <a href="#">Mot de passe oublié ?</a>
+          </p>
+          <div className="d-grid gap-2 mt-3">
+              <Link to="/inscription" className="btn btn-secondary">Inscription</Link>
+            </div>
         </div>
-      ) : (
-        <form onSubmit={handleLogin}>
-          <input
-            type="text"
-            placeholder="Nom d'utilisateur"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-          <input
-            type="password"
-            placeholder="Mot de passe"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <button type="submit">Se connecter</button>
-        </form>
-      )}
+      </form>
     </div>
     </div>
+    
   );
 }
 

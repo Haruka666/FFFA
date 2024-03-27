@@ -11,6 +11,7 @@ import Joueur from './pages/Joueur';
 import Stats from './pages/Stats';
 import Divisions from './pages/Divisions';
 import Connexion from './pages/Connexion';
+import Inscription from './pages/Inscription';
 
 
 const router = createBrowserRouter([
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
   {
     path: "/Connexion",
     element: <Connexion/>,
+  },
+  {
+    path: "/Inscription",
+    element: <Inscription/>,
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
