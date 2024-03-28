@@ -21,13 +21,3 @@
 .App-link {
   color: #61dafb;
 }
-
-body{
-  margin: 0;
-  padding: 0;
-  background-image: url('../images/Login_FFFA.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100vw;
-}

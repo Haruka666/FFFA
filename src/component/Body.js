@@ -4,9 +4,11 @@ function Body() {
     return(
         <div className='body-css'>
             <h1 className='mini-titre'>LES PRINCIPES</h1>
-            <h2 className="body-reglement">Le football américain est un jeu de gagne-terrain ou l’attaque doit atteindre l’en-but (End zone)
+            <h2>
+                <p className='body-reglement'>
+                Le football américain est un jeu de gagne-terrain ou l’attaque doit atteindre l’en-but (End zone)
              adverses tandis que la défense doit l’en empêcher.Une équipe se décompose en 3 escouades l’attaque, la défense et l’équipe spéciale
-            (en charge des coups de pieds). Mais sur le terrain c’est bien 11 joueurs contre 11 joueurs avec des rôles bien précis.</h2>
+            (en charge des coups de pieds). Mais sur le terrain c’est bien 11 joueurs contre 11 joueurs avec des rôles bien précis.</p></h2>
             <h1 className='mini-titre'>L'ATTAQUE</h1>
             <h2 className="body-reglement">Pour avancer l’équipe d’attaque dispose de quatre tentatives pour gagner 10 yards (9,1 m) . Si elle y parvient (que ce soit dès sa première tentative ou lors de son ultime essai),
                 elle a de nouveau le droit à quatre tentati­ves. Et ainsi de suite jusqu’à ce qu’elle pénètre, balle en main, dans l’end zone.

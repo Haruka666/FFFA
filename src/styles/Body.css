@@ -1,9 +1,15 @@
-@media screen and (max-width: 1024px) {
 .body-reglement{
-    margin-left: auto;
-    font-size: 3vw;
+margin-left: auto;
+  word-wrap: break-word;
+  text-align: justify;
+  box-sizing: inherit;
 }
-}
+@media screen and (max-width: 600px) {
+    .body-reglement {
+      font-size: 4vw;
+    }
+  }
+
 
 .mini-titre{
     text-align: center;
@@ -12,9 +18,9 @@
 }
 
 
-.body-css{
+/*.body-css{
     background-color: #508cfc9d;
-}
+}*/
 
 .body-point{
     text-align: center;

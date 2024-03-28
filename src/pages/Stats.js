@@ -38,7 +38,7 @@ function Stats() {
       </div>
       <form className="football-stats-form" onSubmit={handleSubmit}>
         <label>
-          Équipe :
+          Joueur :
           <input
             type="text"
             name="team"

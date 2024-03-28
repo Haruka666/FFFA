@@ -7,7 +7,7 @@ function Divisions() {
     <div>
       <Accueil />
       <Navbar></Navbar>
-      <div> Page Division</div>
+      <div></div>
     </div>
   );
 }

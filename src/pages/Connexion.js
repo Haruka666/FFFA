@@ -9,7 +9,7 @@ function Connexion() {
   return (
     <div>
       <Accueil />
-      <Navbar></Navbar>
+      <Navbar></Navbar><p></p>
       <div className="Auth-form-container">
       <form className="Auth-form">
         <div className="Auth-form-content">
@@ -36,7 +36,7 @@ function Connexion() {
             </button>
           </div>
           <p className="Mdp-oublie">
-          <a href="#">Mot de passe oublié ?</a>
+          <Link to="/" className="btn btn-secondary">Mot de passe oublié ?</Link>
           </p>
           <div className="d-grid gap-2 mt-3">
               <Link to="/inscription" className="btn btn-secondary">Inscription</Link>

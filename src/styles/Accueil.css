@@ -4,11 +4,10 @@
 	border-bottom: solid 3px black;
 	display: flex;
 	align-items: center;
-	background-color: #508cfc9d;
+	/*background-color: #508cfc9d;*/
 }
 
 .fffa-title {
-	
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -22,4 +21,15 @@
 .fffa-login {
 	background-color: #6c757d;
     color: #fff;
+	margin-right:  3%;
+}
+
+@media screen and (max-width: 600px) {
+	.fffa-title{
+		width: 300px;
+	}
+	.fffa-logo{
+		width: 20%;
+	}
+
 }

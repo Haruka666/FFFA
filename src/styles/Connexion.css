@@ -1,52 +1,55 @@
 .Auth-form-container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.Auth-form-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.Mdp-oublie {
+  text-align: right;
+  color: #fff;
+}
+
+
+@media screen and (max-width: 600px) {
+  .Auth-form-container {
+    max-width: 300px;
   }
-  
-  .Auth-form-title {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .form-control {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    text-decoration: none;
-  }
-  
-  .btn-primary {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  .btn-secondary {
-    background-color: #6c757d;
-    color: #fff;
-  }
-  
-  .Mdp-oublie {
-    text-align: center;
-  }
-  
-  /* Responsive Styles */
-  @media screen and (max-width: 600px) {
-    .Auth-form-container {
-      max-width: 300px;
-    }
-  }
-  
+}

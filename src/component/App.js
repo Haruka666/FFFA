@@ -6,7 +6,7 @@ import Body from './Body';
 
 function App() {
   return (
-    <div>
+    <div className='App'>
       <Accueil /><Navbar /><Body /> 
     </div>
   );
