@@ -13,9 +13,9 @@
     align-items: center;
   }
   
-  /* Pour une disposition en colonne sur les petits écrans */
+
   @media (max-width: 768px) {
     .app-container {
-      flex-direction: column;
+      flex-direction:column;
     }
   }

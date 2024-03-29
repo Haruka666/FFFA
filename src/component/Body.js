@@ -3,7 +3,7 @@ import Equipement from '../images/Equipement.png';
 function Body() {
     return(
         <div className='body-css'>
-            <h1 className='mini-titre'>LES PRINCIPES</h1>
+            <h1 className='mini-titre'>REGLE DE BASE</h1>
             <h2>
                 <p className='body-reglement'>
                 Le football américain est un jeu de gagne-terrain ou l’attaque doit atteindre l’en-but (End zone)

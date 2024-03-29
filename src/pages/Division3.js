@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../component/Navbar';
 import Accueil from '../component/Accueil';
 
-function Division1() {
+function Division3() {
   return (
     <div>
       <Accueil />
@@ -12,4 +12,4 @@ function Division1() {
   );
 }
 
-export default Division1;
+export default Division3;

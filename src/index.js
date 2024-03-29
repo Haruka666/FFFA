@@ -12,6 +12,10 @@ import Stats from './pages/Stats';
 import Divisions from './pages/Divisions';
 import Connexion from './pages/Connexion';
 import Inscription from './pages/Inscription';
+import Division1 from './pages/Division1';
+import Division2 from './pages/Division2';
+import Division3 from './pages/Division3';
+import Division4 from './pages/Division4';
 
 
 const router = createBrowserRouter([
@@ -38,6 +42,22 @@ const router = createBrowserRouter([
   {
     path: "/Inscription",
     element: <Inscription/>,
+  },
+  {
+    path: "/Division1",
+    element: <Division1/>,
+  },
+  {
+    path: "/Division2",
+    element: <Division2/>,
+  },
+  {
+    path: "/Division3",
+    element: <Division3 />,
+  },
+  {
+    path: "/Division4",
+    element: <Division4/>,
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));

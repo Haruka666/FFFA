@@ -10,6 +10,8 @@ function Stats() {
     yards: 0,
     touchdowns: 0,
     interceptions: 0,
+    placage:0,
+    sack:0,
   });
 
   const handleChange = (e) => {
@@ -28,6 +30,8 @@ function Stats() {
       yards: 0,
       touchdowns: 0,
       interceptions: 0,
+      placage:0,
+      sack:0,
     });
   };
   return (
@@ -70,6 +74,24 @@ function Stats() {
             type="number"
             name="interceptions"
             value={stats.interceptions}
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          Placage :
+          <input
+            type="number"
+            name="placage"
+            value={stats.placage}
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          Sack :
+          <input
+            type="number"
+            name="Sack"
+            value={stats.sack}
             onChange={handleChange}
           />
         </label>
