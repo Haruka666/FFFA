@@ -3,6 +3,11 @@ margin-left: auto;
   word-wrap: break-word;
   text-align: justify;
   box-sizing: inherit;
+  background-color: #ffffff5a;
+  padding: 70px;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: 0 auto;
 }
 @media screen and (max-width: 600px) {
     .body-reglement {
@@ -17,10 +22,6 @@ margin-left: auto;
 
 }
 
-
-/*.body-css{
-    background-color: #508cfc9d;
-}*/
 
 .body-point{
     text-align: center;

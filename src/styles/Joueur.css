@@ -1,0 +1,42 @@
+.Search-Joueur{
+    background-color: #ffffff;
+    padding: 70px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.Search-Bar {
+    width: 200px; 
+    height: 30px; 
+    padding: 5px; 
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    font-size: 14px;
+  }
+
+.User-Logo{
+    width: 50px; 
+    height: 50px; 
+    margin-right: 10px;
+}
+
+.search{
+    width: 30%;
+}
+
+.Search-Button {
+    height: 30px; 
+    padding: 5px 10px; 
+    background-color: #007bff; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; 
+  }
+
+  .Search-Button:hover {
+    background-color: #0c71dc; 
+  }  

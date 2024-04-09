@@ -15,7 +15,7 @@ function Connexion() {
         <div className="Auth-form-content">
           <h3 className="Auth-form-title">Connexion</h3>
           <div className="form-group mt-3">
-            <label>Email    </label>
+            <label> Email </label>
             <input
               type="email"
               className="form-control mt-1"
@@ -23,7 +23,7 @@ function Connexion() {
             />
           </div>
           <div className="form-group mt-3">
-            <label>Mot de passe</label>
+            <label> Mot de passe </label>
             <input
               type="password"
               className="form-control mt-1"
@@ -36,7 +36,7 @@ function Connexion() {
             </button>
           </div>
           <p className="Mdp-oublie">
-          <Link to="/" className="btn btn-secondary">Mot de passe oublié ?</Link>
+          <Link to="/" className="btn btn-secondary"> Mot de passe oublié ? </Link>
           </p>
           <div className="d-grid gap-2 mt-3">
               <Link to="/inscription" className="btn btn-secondary">Inscription</Link>
