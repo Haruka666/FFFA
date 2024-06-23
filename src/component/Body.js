@@ -35,7 +35,7 @@ function Body() {
             <p className='body-point'>Safety (lorsqu’un joueur de l’attaque est  plaqué avec la balle dans son propre en but) : 2 points</p>
             </h2>
             <h1 className='mini-titre'>L’EQUIPEMENT</h1>
-           <img src ={Equipement} alt= 'Equipement-foot-us' className='body-image'/>
+           <div className='body-reglement'><img src ={Equipement} alt= 'Equipement-foot-us' className='body-image'/></div>
         </div>
     )
 }

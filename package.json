@@ -2,11 +2,14 @@
   "name": "fffa-application",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:5000",
   "dependencies": {
     "@mui/material": "^5.15.15",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    
+    "axios": "^1.7.2",
     "bootstrap": "^5.3.3",
     "mdb-react-ui-kit": "^7.2.0",
     "react": "^18.2.0",
@@ -19,7 +22,13 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "client": "npm start --prefix client",
+    "server": "npm start --prefix server",
+    "dev": "concurrently \"npm run client\" \"npm run server\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0"
   },
   "eslintConfig": {
     "extends": [
@@ -39,4 +48,5 @@
       "last 1 safari version"
     ]
   }
+  
 }

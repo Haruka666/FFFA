@@ -12,6 +12,7 @@ function Stats() {
     interceptions: 0,
     placage:0,
     sack:0,
+    catch:0,
   });
 
   const handleChange = (e) => {
@@ -32,6 +33,7 @@ function Stats() {
       interceptions: 0,
       placage:0,
       sack:0,
+      catch:0,
     });
   };
   return (
@@ -92,6 +94,15 @@ function Stats() {
             type="number"
             name="Sack"
             value={stats.sack}
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          Catch :
+          <input
+            type="number"
+            name="Catch"
+            value={stats.catch}
             onChange={handleChange}
           />
         </label>

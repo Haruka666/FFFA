@@ -28,6 +28,7 @@ function Navbar() {
           )}
         </li>
         <li><Link to="/Stats">Stats</Link></li>
+        <li><Link to="/Match">Match</Link></li>
       </ul>
     </nav>
   );

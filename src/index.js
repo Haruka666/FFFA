@@ -16,6 +16,7 @@ import Division1 from './pages/Division1';
 import Division2 from './pages/Division2';
 import Division3 from './pages/Division3';
 import Division4 from './pages/Division4';
+import Match from './pages/Match';
 
 
 const router = createBrowserRouter([
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
   {
     path: "/Division4",
     element: <Division4/>,
+  },
+  {
+    path: "/Match",
+    element: <Match/>,
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
