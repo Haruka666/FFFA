@@ -22,6 +22,21 @@ app.get('/api/hello', (req, res) => {
   });
 });
 
+// Route pour ajouter un match
+app.post('/api/matches', (req, res) => {
+  console.log('on y est');
+  const { equipe1, equipe2, score1, score2, jour } = req.body;
+  const sql = `INSERT INTO matchfa (equipe1, equipe2, score1, score2, jour) VALUES (?, ?, ?, ?, ?)`;
+  connection.query(sql, [equipe1, equipe2, score1, score2, jour], (err, results) => {
+    if (err) {
+      console.error('Error inserting match:', err);
+      res.status(500).json({ error: 'Error inserting match' });
+      return;
+    }
+    res.status(201).json({ message: 'Match added successfully', matchId: results.insertId });
+  });
+});
+
 // Démarrer le serveur
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
