@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const connection = require('./config/database');
+const bcrypt = require('bcrypt');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
@@ -34,6 +35,63 @@ app.post('/api/matches', (req, res) => {
       return;
     }
     res.status(201).json({ message: 'Match added successfully', matchId: results.insertId });
+  });
+});
+
+app.post('/api/login', async (req, res) => {
+  const { username, password } = req.body;
+  const sql = 'SELECT * FROM utilisateur WHERE email_club = ?'; // Assurez-vous de stocker les mots de passe de manière sécurisée (hachage)
+  connection.query(sql, [username], async (err, results) => {
+    if (err) {
+      console.error('Error executing query:', err);
+      res.status(500).json({ success: false, message: 'Error executing query' });
+      return;
+    }
+    if (results.length > 0) {
+      const isPasswordMatched = await bcrypt.compare(password, results[0].motDePasse);
+      if (isPasswordMatched) {
+        res.json({ success: true, message: 'Login successful' });
+      } else {
+        res.json({ success: true, message: 'Login failed' });
+      }
+    } else {
+      res.status(401).json({ success: false, message: 'Invalid credentials' });
+    }
+  });
+});
+
+//parti inscription
+
+app.post('/api/inscription', async (req, res) => {
+  console.log('je suis bien la');
+  const { NomDuClub, email, password } = req.body;
+
+//Vérification si l'utilisateur existe déjà 
+
+const userCheckSql = 'SELECT * FROM utilisateur WHERE email_club = ?';
+  connection.query(userCheckSql, [email], async (err, results) => {
+    if (err) {
+      console.error('Error checking user:', err);
+      return res.status(500).json({ error: 'Error checking user' });
+    }
+    if (results.length > 0) {
+      return res.status(400).json({ error: 'Email already exists' });
+    }
+    console.log("ici");
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+
+    // Insertion de l'utilisateur dans la base de données
+    const sql = 'INSERT INTO utilisateur (club, email_club, motdepasse) VALUES (?, ?, ?)';
+    connection.query(sql, [NomDuClub, email, hashedPassword], (err, results) => {
+      console.log("et la");
+      console.log(results);
+      if (err) {
+        console.error('Error inserting user:', err);
+        return res.status(500).json({ error: 'Error inserting user' });
+      }
+      res.status(201).json({ message: 'Inscription réussie', status : 'OK', userId: results.insertId });
+    });
   });
 });
 

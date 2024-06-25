@@ -19,3 +19,23 @@ export const addMatch = async (match) => {
     console.error('Error adding match:', error);
   }
 };
+
+export const login = async (username, password) => {
+  try {
+    const response = await axios.post(`${API_URL}/login`, { username, password });
+    return response.data;
+  } catch (error) {
+    console.error('Login error:', error);
+    return { success: false, message: 'Login failed' };
+  }
+};
+
+export const inscription = async (formData) => {
+  try {
+    const response = await axios.post(`${API_URL}/inscription`, formData);
+    return response.data;
+  } catch (error) {
+    console.error('Error adding match:', error);
+  }
+};
+

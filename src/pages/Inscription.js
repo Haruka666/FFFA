@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import Accueil from "../component/Accueil";
 import Navbar from "../component/Navbar";
+import { useNavigate } from 'react-router-dom';
 import '../styles/Inscription.css';
+import { inscription } from '../services/api';
 
 function Inscription() {
   const [formData, setFormData] = useState({
@@ -9,6 +11,8 @@ function Inscription() {
     email: '',
     password: '',
   });
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,22 +24,15 @@ function Inscription() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const response = await fetch('http://localhost:5000/api/inscription', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-      if (response.ok) {
+      console.log(formData);
+      const response = await inscription(formData);
+      console.log(response);
+      if (response.status === 'OK') {
         console.log('Inscription réussie');
+        navigate('/Connexion');
       } else {
-        console.error('Erreur lors de l\'inscription');
+        setError('Erreur lors de l\'inscription');
       }
-    } catch (error) {
-      console.error('Erreur lors de l\'inscription:', error);
-    }
   };
 
   return (
@@ -45,11 +42,12 @@ function Inscription() {
       <div className="signup-form">
         <h2>Inscription</h2>
         <form onSubmit={handleSubmit}>
-          <input type="text" name="NomDuClub" placeholder="Nom du Club" value={formData.NomDuClub} onChange={handleChange} />
-          <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} />
-          <input type="password" name="password" placeholder="Mot de passe" value={formData.password} onChange={handleChange} />
+          <input type="text" name="NomDuClub" placeholder="Nom du Club" value={formData.NomDuClub} onChange={handleChange} required />
+          <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
+          <input type="password" name="password" placeholder="Mot de passe" value={formData.password} onChange={handleChange} required />
           <button type="submit">S'inscrire</button>
         </form>
+        {error && <p>{error}</p>}
       </div>
     </div>
   );
