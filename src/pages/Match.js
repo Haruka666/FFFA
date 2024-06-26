@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Navbar from '../component/Navbar';
+import '../styles/Match.css';
 import Accueil from '../component/Accueil';
 import { addMatch } from '../services/api';
 
@@ -24,7 +24,6 @@ function Match() {
   return (
     <div>
       <Accueil />
-      <Navbar></Navbar>
       <div><h2>Ajout de match</h2>
       <form className= "form_match" onSubmit={handleSubmit}>
         <div>

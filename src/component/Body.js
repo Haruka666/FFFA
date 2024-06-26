@@ -1,8 +1,10 @@
 import '../styles/Body.css'
 import Equipement from '../images/Equipement.png';
+import Accueil from './Accueil';
 function Body() {
     return(
-        <div className='body-css'>
+        <div><Accueil />
+        <div className='body-css '>
             <h1 className='mini-titre'>REGLE DE BASE</h1>
             <h2>
                 <p className='body-reglement'>
@@ -36,7 +38,7 @@ function Body() {
             </h2>
             <h1 className='mini-titre'>L’EQUIPEMENT</h1>
            <div className='body-reglement'><img src ={Equipement} alt= 'Equipement-foot-us' className='body-image'/></div>
-        </div>
+        </div></div>
     )
 }
 

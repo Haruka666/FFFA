@@ -39,7 +39,6 @@ function Stats() {
   return (
     <div>
       <Accueil />
-      <Navbar></Navbar>
       <div className="app-container">
       </div>
       <form className="football-stats-form" onSubmit={handleSubmit}>

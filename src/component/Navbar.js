@@ -12,7 +12,7 @@ function Navbar() {
   return (
 <nav>
       <ul>
-        <li><Link to="/">Accueil</Link></li>
+        <li><Link to="/Accueil">Accueil</Link></li>
         <li><Link to="/Joueur">Joueur</Link></li>
         <li onMouseEnter={toggleDivisions} onMouseLeave={toggleDivisions}>
           <span>Divisions</span>

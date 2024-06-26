@@ -1,13 +1,13 @@
 import React from 'react';
 import '../styles/App.css';
-import Accueil from './Accueil';
+import Connexion from '../pages/Connexion';
 import Navbar from './Navbar';
 import Body from './Body';
 
 function App() {
   return (
     <div className='App'>
-      <Accueil /><Navbar /><Body /> 
+      <Connexion />
     </div>
   );
 }

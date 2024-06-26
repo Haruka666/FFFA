@@ -29,7 +29,6 @@ function Joueur() {
   return (
     <div>
       <Accueil />
-      <Navbar />
       <p></p>
       <div className='Search-Joueur'>
         <img src={User_Logo} alt='Logo_User' className='User-Logo' />
