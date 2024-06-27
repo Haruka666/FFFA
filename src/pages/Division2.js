@@ -6,7 +6,6 @@ function Division2() {
   return (
     <div>
       <Accueil />
-      <Navbar></Navbar>
       <div></div>
     </div>
   );

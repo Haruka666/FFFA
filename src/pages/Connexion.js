@@ -20,7 +20,7 @@ function Connexion() {
     const result = await login(username, password);
     if (result.success) {
       // Sauvegarder le token ou les informations de l'utilisateur si nécessaire
-      navigate('/Body');
+      navigate('/Accueil');
     } else {
       setError(result.message);
     }
