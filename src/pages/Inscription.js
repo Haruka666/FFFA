@@ -38,7 +38,6 @@ function Inscription() {
   return (
     <div>
       <Accueil />
-      <Navbar />
       <div className="signup-form">
         <h2>Inscription</h2>
         <form onSubmit={handleSubmit}>
