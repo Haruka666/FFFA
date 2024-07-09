@@ -1,0 +1,22 @@
+.division-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+
+  .division-container img {
+    margin: 10px;
+    width: 150px;
+    height: auto;
+    vertical-align: middle;
+  }
+  
+  .division-container h3 {
+    background-color: azure;
+    width: 200px; 
+    height: 30px; 
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  
