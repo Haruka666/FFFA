@@ -19,7 +19,6 @@ function Connexion() {
     e.preventDefault();
     const result = await login(username, password);
     if (result.success) {
-      // Sauvegarder le token ou les informations de l'utilisateur si nécessaire
       navigate('/Body');
     } else {
       setError(result.message);
@@ -30,8 +29,7 @@ function Connexion() {
     <div>
       <div className='fffa-banner'> 
 	<img src ={Logo_FFFA} alt= 'logo_fffa_2013' className='fffa-logo'/>
-	<h1 className='fffa-title'> Générateur De Stats</h1>
-	<h2 className='fffa-login'><Link to="/Connexion">Connexion</Link></h2></div>
+	<h1 className='fffa-title'> Générateur De Stats</h1></div>
       <div className="Auth-form-container App">
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
