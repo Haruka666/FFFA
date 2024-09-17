@@ -1,17 +1,34 @@
 const mysql = require('mysql');
 
-const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',        // Remplacez par votre utilisateur MySQL
-  database: 'fffa' // Remplacez par votre nom de base de données
-});
+class Database {
+    constructor() {
+        this.connection = mysql.createConnection({
+            host: 'localhost',
+            user: 'root',
+            password: 'password',
+            database: 'your_database_name'
+        });
 
-connection.connect((err) => {
-  if (err) {
-    console.error('Error connecting to the database:', err);
-    return;
-  }
-  console.log('Connected to the MySQL database.');
-});
+        this.connection.connect(err => {
+            if (err) {
+                console.error('Error connecting to database:', err);
+                return;
+            }
+            console.log('Database connected!');
+        });
+    }
 
-module.exports = connection;
+    query(sql, params) {
+        return new Promise((resolve, reject) => {
+            this.connection.query(sql, params, (err, results) => {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(results);
+                }
+            });
+        });
+    }
+}
+
+module.exports = new Database();

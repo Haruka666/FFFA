@@ -1,6 +1,4 @@
 import React, {useState} from 'react';
-import Navbar from '../component/Navbar';
-import Accueil from '../component/Accueil';
 import { Link } from 'react-router-dom';
 import { login } from '../services/api';
 import { useNavigate } from 'react-router-dom';
@@ -30,8 +28,7 @@ function Connexion() {
     <div>
       <div className='fffa-banner'> 
 	<img src ={Logo_FFFA} alt= 'logo_fffa_2013' className='fffa-logo'/>
-	<h1 className='fffa-title'> Générateur De Stats</h1>
-	<h2 className='fffa-login'><Link to="/Connexion">Connexion</Link></h2></div>
+	<h1 className='fffa-title'> Générateur De Stats</h1></div>
       <div className="Auth-form-container App">
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>

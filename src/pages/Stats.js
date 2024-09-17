@@ -1,19 +1,22 @@
 import React,{useState} from 'react';
 import Navbar from '../component/Navbar';
 import Accueil from '../component/Accueil';
+import { addStat } from '../services/api';
 import '../styles/Stats.css'
 
 function Stats() {
 
   const [stats, setStats] = useState({
-    team: '',
+    player: '',
     yards: 0,
     touchdowns: 0,
     interceptions: 0,
     placage:0,
     sack:0,
-    catch:0,
+    reception:0,
   });
+  
+  const [message, setMessage] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,18 +26,13 @@ function Stats() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Stats envoyées :', stats);
-    setStats({
-      team: '',
-      yards: 0,
-      touchdowns: 0,
-      interceptions: 0,
-      placage:0,
-      sack:0,
-      catch:0,
-    });
+    console.log(stats);
+    const data = await addStat(stats);
+    if (data && data.message) {
+      setMessage(data.message);
+    }
   };
   return (
     <div>
@@ -46,8 +44,8 @@ function Stats() {
           Joueur :
           <input
             type="text"
-            name="team"
-            value={stats.team}
+            name="player"
+            value={stats.player}
             onChange={handleChange}
           />
         </label>
@@ -91,7 +89,7 @@ function Stats() {
           Sack :
           <input
             type="number"
-            name="Sack"
+            name="sack"
             value={stats.sack}
             onChange={handleChange}
           />
@@ -100,8 +98,8 @@ function Stats() {
           Catch :
           <input
             type="number"
-            name="Catch"
-            value={stats.catch}
+            name="reception"
+            value={stats.reception}
             onChange={handleChange}
           />
         </label>

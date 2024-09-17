@@ -39,3 +39,12 @@ export const inscription = async (formData) => {
   }
 };
 
+export const addStat = async (statPlayer) => {
+  try {
+    const response = await axios.post(`${API_URL}/stats`, statPlayer);
+    return response.data;
+  } catch (error) {
+    console.error('Error adding Stat:', error);
+  }
+};
+
